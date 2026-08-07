@@ -1,0 +1,10 @@
+body {
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.ign {
+    width: 300px;
+    float: right;
+    top: auto;
+}
