@@ -34,43 +34,49 @@ int main() {
     
     
     float x, y, resultado = 0;
-    char O;
-    printf("\ndigite o valor do primeiro numero: ");
-    scanf("%f", &x);
-    getchar();
-    printf("\ndigite a operação desejada( +, %, *, - ) : ");
-    scanf("%c", &O);
-    printf("\ndigite o valor do segundo numero: ");
-    scanf("%f", &y);
+        char O;
     
-    switch ( O )
-    {
-        case '+': 
-            resultado = (x + y);
-            break;
-            
-        case '%':
-            if (y != 0) {
-                resultado = x / y;
-            } else {
-                printf("\nErro: Divisao por zero!");
-                resultado = 0;
-            }
-            break;
-            
-        case '*':
-            resultado = (x * y);
-            break;
-            
-        case '-':
-            resultado = (x - y);
-            break;
-            
-        default:
-            printf("\ncomando incorreto", resultado = 0);
-            break;
-    }
-    printf("o resultado da conta é: %f", resultado);
+        printf("\ndigite o valor do primeiro numero: ");
+        scanf("%f", &x);
+    
+        getchar(); // Consome o \n do teclado
+    
+        printf("\ndigite a operação desejada( +, /, *, - ) : ");
+        scanf("%c", &O);
+    
+        printf("\ndigite o valor do segundo numero: ");
+        scanf("%f", &y);
+    
+        switch ( O ) {
+            case '+': 
+                resultado = x + y;
+                break;
+    
+            case '/':
+                if (y != 0) {
+                    resultado = x / y;
+                } else {
+                    printf("\nErro: Divisao por zero!\n");
+                    return 1; // Encerra o programa se houver erro
+                }
+                break;
+    
+            case '*':
+                resultado = x * y;
+                break;
+    
+            case '-':
+                resultado = x - y;
+                break;
+    
+            default:
+                printf("\nOperação inválida!\n");
+                return 1; // Encerra o programa se o operador for inválido
+        }
+    
+        printf("\nO resultado da conta é: %.2f\n", resultado);
+    
+        return 0;
     
     
     
