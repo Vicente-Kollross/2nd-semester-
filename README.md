@@ -1,3 +1,3 @@
 # 2nd-semester-
 
-Projetos, aulas e aprendizados do 2 semestre, Ciência a Computação PUCPR
+Projects, classes, and learning experiences from the 2nd semester, Computer Science, PUCPR
